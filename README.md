@@ -6,16 +6,16 @@ This workshop covers the following sections:
 
 #Getting Started 
 
-What is Docker?
-How is it different from VMs?
-How to install Docker on Linux?
-How to install Docker on Windows?
-Creating Your First Docker Container
+What is Docker?<br />
+How is it different from VMs?<br />
+How to install Docker on Linux?<br />
+How to install Docker on Windows?<br />
+Creating Your First Docker Container<br />
 
 #Docker Compose
 
-What is Docker Compose?
-Building Your First Compose File?
+What is Docker Compose?<br />
+Building Your First Compose File?<br />
 
 #Docker Swarm
 
