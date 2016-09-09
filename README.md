@@ -1,2 +1,21 @@
 # Docker-Workshop
-This is for Beginners who wants to start with Docker Basics and move to the advanced level of understanding around Docker Tools and Ecosystem.
+
+Welcome to Docker !
+
+This workshop covers the following sections:
+
+#Getting Started 
+
+What is Docker?
+How is it different from VMs?
+How to install Docker on Linux?
+How to install Docker on Windows?
+Creating Your First Docker Container
+
+#Docker Compose
+
+What is Docker Compose?
+Building Your First Compose File?
+
+#Docker Swarm
+
