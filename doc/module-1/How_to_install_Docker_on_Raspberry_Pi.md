@@ -28,7 +28,7 @@ Server:
 pi@raspberrypi:~ $
 </pre>
 #Let's search for CentOS ARM container which I created and is available under Dockerhub.
-
+<pre>
 pi@raspberrypi:~/Desktop $ sudo docker search ajeetraina
 NAME                             DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
 ajeetraina/nagios                Docker container for Monitoring Dell Physi...   0
@@ -37,9 +37,9 @@ ajeetraina/dell-syscfg           Running Dell SYSCFG inside Docker container    
 ajeetraina/centos7-arm                                                           0
 ajeetraina/nagios-docker         Docker container for Monitoring Dell Physi...   0
 ajeetraina/syscfg-minimal        Running Dell SYSCFG inside Docker containe...   0
-
+</pre>
 #Running Your First Docker container:
-
+<pre>
 pi@raspberrypi:~/Desktop $ sudo docker run -it ajeetraina/centos7-arm cat /etc/os-release
 Unable to find image 'ajeetraina/centos7-arm:latest' locally
 latest: Pulling from ajeetraina/centos7-arm
@@ -63,18 +63,18 @@ CENTOS_MANTISBT_PROJECT="CentOS-7"
 CENTOS_MANTISBT_PROJECT_VERSION="7"
 REDHAT_SUPPORT_PRODUCT="centos"
 REDHAT_SUPPORT_PRODUCT_VERSION="7"
+</pre>
 
-pi@raspberrypi:~/Desktop $
 
 #Listing the Docker Image:
-
+<pre>
 pi@raspberrypi:~ $ sudo docker images
 REPOSITORY               TAG                 IMAGE ID            CREATED             SIZE
 ajeetraina/centos7-arm   latest              495db0a341d8        20 hours ago        210.6 MB
 pi@raspberrypi:~ $
-
+</pre>
 #You can verify the information:
-
+<pre>
 pi@raspberrypi:~ $ sudo docker info
 Containers: 1
  Running: 0
@@ -113,43 +113,34 @@ WARNING: No cpuset support
 Insecure Registries:
  127.0.0.0/8
 pi@raspberrypi:~ $
-
+</pre>
 #Starting the container:
-
+<pre>
 pi@raspberrypi:~ $ sudo docker run -dit ajeetraina/centos7-arm /bin/bash
 f0641cd68756ef2a0ab337ac06cfef6ce49010a5e3a538374c8b3473c87d1447
-
+</pre>
 #Verifying container has started or not:
-
+<pre>
 pi@raspberrypi:~ $ sudo docker ps
 CONTAINER ID        IMAGE                    COMMAND             CREATED             STATUS              PORTS               NAMES
 f0641cd68756        ajeetraina/centos7-arm   "/bin/bash"         5 seconds ago       Up 4 seconds                            drunk_meitner
 pi@raspberrypi:~ $
-
+</pre>
 #Entering into into the container?
-
+<pre>
 pi@raspberrypi:~ $ sudo docker attach f064
 [root@f0641cd68756 /]#
 [root@f0641cd68756 /]#
-
+</pre>
 You just need first few snippet of Container ID to enter into the container.
 
 Let's check the kernel version of the container:
-
+<pre>
 [root@f0641cd68756 /]# uname -arn
 Linux f0641cd68756 4.4.11-v7+ #888 SMP Mon May 23 20:10:33 BST 2016 armv7l armv7l armv7l GNU/Linux
 [root@f0641cd68756 /]#
+</pre>
 
 
 
 
-===============================================
-
-pi@raspberrypi:~/Desktop $ sudo git clone https://github.com/ajeetraina/Docker-Workshop
-Cloning into 'Docker-Workshop'...
-remote: Counting objects: 18, done.
-remote: Compressing objects: 100% (15/15), done.
-remote: Total 18 (delta 3), reused 0 (delta 0), pack-reused 0
-Unpacking objects: 100% (18/18), done.
-Checking connectivity... done.
-pi@raspberrypi:~/Desktop $
