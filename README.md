@@ -1,6 +1,6 @@
-# Run Docker-Workshop on Raspberry Pi 
+# Run Docker-Workshop on Raspberry Pis
 
-Welcome to Docker on Raspberry Pi !
+Welcome to Docker on Raspberry Pis !
 
 This workshop covers the following sections:
 
