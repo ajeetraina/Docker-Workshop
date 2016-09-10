@@ -1,13 +1,13 @@
-##Infrastructure Setup for Pi
+#Infrastructure Setup for Pi
 
 Pi-1: 192.168.1.8/24
 Pi-2: 192.168.1.4/24
 
-##Installing Docker 
+#Installing Docker 
 
 $curl -sSL https://get.docker.com/ | sh
 
-##Verify the docker version:
+#Verify the docker version:
 
 pi@raspberrypi:~ $ sudo docker version
 Client:
@@ -27,7 +27,7 @@ Server:
  OS/Arch:      linux/arm
 pi@raspberrypi:~ $
 
-##Let's search for CentOS ARM container which I created and is available under Dockerhub.
+#Let's search for CentOS ARM container which I created and is available under Dockerhub.
 
 pi@raspberrypi:~/Desktop $ sudo docker search ajeetraina
 NAME                             DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
@@ -38,7 +38,7 @@ ajeetraina/centos7-arm                                                          
 ajeetraina/nagios-docker         Docker container for Monitoring Dell Physi...   0
 ajeetraina/syscfg-minimal        Running Dell SYSCFG inside Docker containe...   0
 
-##Running Your First Docker container:
+#Running Your First Docker container:
 
 pi@raspberrypi:~/Desktop $ sudo docker run -it ajeetraina/centos7-arm cat /etc/os-release
 Unable to find image 'ajeetraina/centos7-arm:latest' locally
@@ -66,14 +66,14 @@ REDHAT_SUPPORT_PRODUCT_VERSION="7"
 
 pi@raspberrypi:~/Desktop $
 
-Listing the Docker Image:
+#Listing the Docker Image:
 
 pi@raspberrypi:~ $ sudo docker images
 REPOSITORY               TAG                 IMAGE ID            CREATED             SIZE
 ajeetraina/centos7-arm   latest              495db0a341d8        20 hours ago        210.6 MB
 pi@raspberrypi:~ $
 
-You can verify the information:
+#You can verify the information:
 
 pi@raspberrypi:~ $ sudo docker info
 Containers: 1
@@ -114,19 +114,19 @@ Insecure Registries:
  127.0.0.0/8
 pi@raspberrypi:~ $
 
-Let's start the container:
+#Starting the container:
 
 pi@raspberrypi:~ $ sudo docker run -dit ajeetraina/centos7-arm /bin/bash
 f0641cd68756ef2a0ab337ac06cfef6ce49010a5e3a538374c8b3473c87d1447
 
-Verify that container has started or not:
+#Verifying container has started or not:
 
 pi@raspberrypi:~ $ sudo docker ps
 CONTAINER ID        IMAGE                    COMMAND             CREATED             STATUS              PORTS               NAMES
 f0641cd68756        ajeetraina/centos7-arm   "/bin/bash"         5 seconds ago       Up 4 seconds                            drunk_meitner
 pi@raspberrypi:~ $
 
-How to enter into the container?
+#Entering into into the container?
 
 pi@raspberrypi:~ $ sudo docker attach f064
 [root@f0641cd68756 /]#
