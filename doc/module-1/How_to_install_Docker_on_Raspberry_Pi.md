@@ -1,11 +1,11 @@
 #Infrastructure Setup for Pi
 
-Pi-1: 192.168.1.8/24
-Pi-2: 192.168.1.4/24
+Pi-1: 192.168.1.8/24<br />
+Pi-2: 192.168.1.4/24<br />
 
 #Installing Docker 
 
-$curl -sSL https://get.docker.com/ | sh
+$curl -sSL https://get.docker.com/ | sh<br />
 
 #Verify the docker version:
 
