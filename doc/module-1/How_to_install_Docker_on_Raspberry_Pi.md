@@ -8,7 +8,7 @@ Pi-2: 192.168.1.4/24<br />
 $curl -sSL https://get.docker.com/ | sh<br />
 
 #Verify the docker version:
-
+<pre>
 pi@raspberrypi:~ $ sudo docker version
 Client:
  Version:      1.12.1
@@ -26,7 +26,7 @@ Server:
  Built:        Thu Aug 18 05:31:15 2016
  OS/Arch:      linux/arm
 pi@raspberrypi:~ $
-
+</pre>
 #Let's search for CentOS ARM container which I created and is available under Dockerhub.
 
 pi@raspberrypi:~/Desktop $ sudo docker search ajeetraina
