@@ -1,11 +1,13 @@
+##Infrastructure Setup for Pi
+
 Pi-1: 192.168.1.8/24
 Pi-2: 192.168.1.4/24
 
-1. Installing Docker 
+##Installing Docker 
 
 $curl -sSL https://get.docker.com/ | sh
 
-2. Verify the docker version:
+##Verify the docker version:
 
 pi@raspberrypi:~ $ sudo docker version
 Client:
@@ -25,7 +27,7 @@ Server:
  OS/Arch:      linux/arm
 pi@raspberrypi:~ $
 
-3. Let's search for CentOS ARM container which I created and is available under Dockerhub.
+##Let's search for CentOS ARM container which I created and is available under Dockerhub.
 
 pi@raspberrypi:~/Desktop $ sudo docker search ajeetraina
 NAME                             DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
@@ -36,7 +38,7 @@ ajeetraina/centos7-arm                                                          
 ajeetraina/nagios-docker         Docker container for Monitoring Dell Physi...   0
 ajeetraina/syscfg-minimal        Running Dell SYSCFG inside Docker containe...   0
 
-4. Running Your First Docker container:
+##Running Your First Docker container:
 
 pi@raspberrypi:~/Desktop $ sudo docker run -it ajeetraina/centos7-arm cat /etc/os-release
 Unable to find image 'ajeetraina/centos7-arm:latest' locally
